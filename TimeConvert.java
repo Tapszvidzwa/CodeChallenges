@@ -21,7 +21,7 @@ public class Solution {
         int newHr = Integer.parseInt(hours);
        
         if(day.equals("PM") && newHr <= 11) {
-            newHr = (newHr + 12) % 24;
+            newHr = (newHr + 12);
         } else if(day.equals("AM") && newHr == 12) {
             newHr = 0;
         }
