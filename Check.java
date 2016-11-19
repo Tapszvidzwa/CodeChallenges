@@ -2,6 +2,7 @@
 import java.util.*; 
 import java.io.*;
 
+//checks if the all the letters in the string are surrounded by +
 class Check {  
   public static String SimpleSymbols(String str) { 
   
