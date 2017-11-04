@@ -7,17 +7,17 @@ public class InsertionSort{
 
 	public static void main(String[] args) {
 
-
-
 		//arr REMEMBER arr IS SEPERATED BY COMMAS
 		//For WHILE LOOPS BETTER IMPLEMENT IN THE FUNCTION AND CHECK WHETHER OR NOT IT IS LESS THAN 0 
 		//ELSE YOU WILL GET AN ARRAY IS OUT OF BOUNDS EXCEPTION
 		//
 		//
-		////if the array has just one element return that array
+		//if the array has just one element return that array
 		//if not then move to the second element
 		//if the previous element is bigger than the element, then switch them
 		//if the previous element is smaller then stop
+		//
+		//YOUTUBE LINK: https://www.youtube.com/watch?time_continue=3&v=OGzPmgsI-pQ
 
 		int arr[] = {4,3,2,1,5};
 
@@ -26,9 +26,6 @@ public class InsertionSort{
 		System.out.println(arr[0]);
 		return;	
 		}
-
-		printArray(arr);
-
 
 		for(int i = 1; i < arr.length; i++) {
 
@@ -39,22 +36,14 @@ public class InsertionSort{
 				int holder = arr[x - 1];
 				arr[x - 1] = arr[x];
 				arr[x] = holder;
-				
-				System.out.println("holder: " + holder + " arr[x - 1]: " + arr[x - 1] + " arr[x]: " + arr[x]); 
-				printArray(arr);
-			
+							
 				--x;
 
 				if(x == 0) {
 					break;
 				}
-									}
-
-
 		
 		}
-			printArray(arr);
-
 	}
 
 
