@@ -9,7 +9,7 @@ typedef struct node{
 	struct node* next;
 } node_t;
 
-//
+//list
 typedef struct list{
 	struct node* head;
 } list_t;
@@ -36,6 +36,25 @@ void insert(node_t* node, list_t* lst) {
 		}
 
 	current->next = node;
+	}
+
+}
+
+void init_list(list_t* lst) {
+ list_t* list = (list_t*) malloc(sizeof(list_t));
+ list->head = NULL;
+}
+
+void destory_list(list_t* lst) {
+
+	node_t* current = lst->head;
+	node_t* holder;
+
+	//free all the nodes
+	while(current != NULL) {
+		holder = current;
+		current = current->next;
+		free(holder);
 	}
 
 }
@@ -79,8 +98,10 @@ return cur->data;
 
 int main() {
 
- list_t* list = (list_t*) malloc(sizeof(list_t));
- list->head = NULL;
+ list_t* list;
+
+ init_list(list);
+
  int list_len = 0;
 
  srand(time(0));
@@ -99,6 +120,8 @@ int main() {
 
  printf("\n PRINTING ELEMENT NUMBER: %d\n", random);
  printf("%c\n", (char) getNode(list->head, random));
+
+ destory_list(list);
 
 }
 
