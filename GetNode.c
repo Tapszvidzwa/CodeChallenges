@@ -96,10 +96,10 @@ return cur->data;
 }
 
 
+
 int main() {
 
  list_t* list;
-
  init_list(list);
 
  int list_len = 0;
